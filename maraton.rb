@@ -18,9 +18,11 @@ class Control
   end
 
   def control_question
+    for i in 1..15
       m_question
       x = gets.chomp
-      m_answer(x)  
+      m_answer(x) 
+    end 
   end
 
   def m_question
