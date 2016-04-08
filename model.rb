@@ -16,10 +16,8 @@ class Deck
   def question
     read
     question = []
-    #if @number_question <= 42
       question << @questions[@index_q]
       @index_q += 3
-    #end
     question.join
   end#mtd question
 
@@ -28,7 +26,7 @@ class Deck
     answer = []
     answer << @questions[@index_a]
     @index_a = @index_q + 1
-    if answer.join == op_answer
+    if answer.join.downcase == op_answer
       return true
     else
       return false

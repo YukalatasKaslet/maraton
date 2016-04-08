@@ -4,7 +4,6 @@ require_relative 'view'
 class Control
 
   def initialize
-    @deck = Deck.new
     @view = View.new
     @count_right = 0
     @count_wrong = 0
@@ -12,6 +11,12 @@ class Control
   end#initialize
 
   def master
+    x = ""
+    x = gets.chomp.downcase
+    case x 
+    when "a" then @deck = Deck.new
+    when "b" then @deck = Deck.new("Historia.csv")
+    end
     @view.welcome
     control_question
     @view.bye(@count_right, @count_wrong)
@@ -20,7 +25,7 @@ class Control
   def control_question
     for i in 1..15
       m_question
-      x = gets.chomp
+      x = gets.chomp.downcase
       m_answer(x) 
     end 
   end

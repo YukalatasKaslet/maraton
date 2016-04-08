@@ -1,6 +1,8 @@
 class View
   def initialize
     puts "Bienvenido a Maratón. Te daremos una pregunta y deberás adivinar la respuesta correcta."
+    puts "¿Cuál deseas jugar?"
+    puts " a) Clásico   b)Historia"
   end
 
   def welcome
