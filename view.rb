@@ -5,6 +5,7 @@ class View
 
   def welcome
     puts "Listo?  Arranca el juego!"
+    puts "\n"
   end
 
   def print_question(question)
@@ -12,7 +13,10 @@ class View
   end
 
   def print_answer(op_answer, value)
-    puts "#{value}: #{op_answer}"
+    puts "\n"
+    puts "Intento: #{op_answer}"
+    puts "#{value}"
+    puts "\n"
   end
 
   def bye(count_right, count_wrong)
