@@ -2,7 +2,7 @@ require 'csv'
 
 class Deck
 
-  def initialize(deck_name = "Cultura_general.csv")
+  def initialize(deck_name)
     @deck_name = deck_name
     @questions = []
     @index_q = 0

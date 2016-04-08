@@ -1,7 +1,7 @@
 require_relative 'model'
 require_relative 'view'
 
-class Control
+class Controller
 
   def initialize
     @view = View.new
@@ -14,7 +14,7 @@ class Control
     x = ""
     x = gets.chomp.downcase
     case x 
-    when "a" then @deck = Deck.new
+    when "a" then @deck = Deck.new("Cultura_general.csv")
     when "b" then @deck = Deck.new("Historia.csv")
     end
     @view.welcome
@@ -52,4 +52,4 @@ class Control
 end#class Control
 
 #x = ARGV.map(&:dup)
-Control.new
+Controller.new
